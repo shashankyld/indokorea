@@ -209,6 +209,8 @@ public:
     friend class ModeFollow;
     friend class ModeGuided;
     friend class ModeLand;
+//Adding new IITD mode as a friend class
+    friend class ModeIitd;
     friend class ModeLoiter;
     friend class ModePosHold;
     friend class ModeRTL;
@@ -920,6 +922,7 @@ private:
 #if MODE_AUTO_ENABLED == ENABLED
     ModeAuto mode_auto;
 #endif
+
 #if AUTOTUNE_ENABLED == ENABLED
     ModeAutoTune mode_autotune;
 #endif
@@ -941,7 +944,15 @@ private:
 #if MODE_GUIDED_ENABLED == ENABLED
     ModeGuided mode_guided;
 #endif
+//Added New Mode here : try both mode_land and mode_iitd
+
+
+    ModeIitd mode_iitd;
+
+
+
     ModeLand mode_land;
+    
 #if MODE_LOITER_ENABLED == ENABLED
     ModeLoiter mode_loiter;
 #endif

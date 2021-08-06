@@ -73,6 +73,19 @@ Mode *Copter::mode_from_mode_num(const Mode::Number mode)
             ret = &mode_land;
             break;
 
+        //NEW MODE ADDED HERE : try both mode_land and mode_iitd
+
+//The MODE_IITD_ENABLED variable is defined in config.h 
+
+// #if MODE_IITD_ENABLED == ENABLED
+//         case Mode::Number::IITD:
+//             ret = &mode_iitd;
+//             break;
+// #endif
+
+        case Mode::Number::IITD:
+            ret = &mode_iitd;
+            break;
 #if MODE_RTL_ENABLED == ENABLED
         case Mode::Number::RTL:
             ret = &mode_rtl;

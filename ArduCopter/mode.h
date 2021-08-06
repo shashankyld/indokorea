@@ -11,7 +11,7 @@ class Mode {
 
 public:
 
-    // Auto Pilot Modes enumeration
+    // Auto Pilot Modes enumeration : New mode added IITD
     enum class Number : uint8_t {
         STABILIZE =     0,  // manual airframe angle with manual throttle
         ACRO =          1,  // manual body-frame angular rate with manual throttle
@@ -20,7 +20,7 @@ public:
         GUIDED =        4,  // fully automatic fly to coordinate or fly at velocity/direction using GCS immediate commands
         LOITER =        5,  // automatic horizontal acceleration with automatic throttle
         RTL =           6,  // automatic return to launching point
-        CIRCLE =        7,  // automatic circular flight with automatic throttle
+        CIRCLE =        28,  // automatic circular flight with automatic throttle
         LAND =          9,  // automatic landing with horizontal position control
         DRIFT =        11,  // semi-autonomous position, yaw and throttle control
         SPORT =        13,  // manual earth-frame angular rate control with manual throttle
@@ -38,7 +38,7 @@ public:
         SYSTEMID  =    25,  // System ID mode produces automated system identification signals in the controllers
         AUTOROTATE =   26,  // Autonomous autorotation
         AUTO_RTL =     27,  // Auto RTL, this is not a true mode, AUTO will report as this mode if entered to perform a DO_LAND_START Landing sequence
-        IITD =         28,  //New Mode based on an existing mode type ??
+        IITD =         7,  //New Mode based on an existing mode type ??
     };
 
 
